@@ -1,26 +1,8 @@
 {
-  "services": {
-    "frontend": {
-      "root": "frontend/",
-      "framework": "vite"
-    },
-    "backend": {
-      "root": "backend/",
-      "entrypoint": "main:app"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": {
-        "service": "backend"
-      }
-    },
-    {
-      "source": "/(.*)",
-      "destination": {
-        "service": "frontend"
-      }
+      "destination": "https://digital-diary-oj3b.vercel.app/:path*"
     }
   ]
 }
