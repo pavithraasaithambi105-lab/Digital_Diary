@@ -10,13 +10,9 @@ app = FastAPI(title="Digital Diary API")
 # CORS is enabled for both common Vite development origins.
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://127.0.0.1:5173",
-        "https://digital-diary-9war.vercel.app"
-    ],
+    allow_origins=["https://digital-diary-9war.vercel.app"],
     allow_credentials=True,
-    allow_methods=["*"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
 
