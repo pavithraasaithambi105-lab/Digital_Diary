@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-    baseURL: "/api",
+    baseURL: "digital-diary-oj3b.vercel.app",
 });
 
 export default API;
